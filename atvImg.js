@@ -121,6 +121,7 @@ function atvImg(){
 
 		if(supportsTouch){
 			win.preventScroll = false;
+		}
 
 	        (function(_thisImg,_layers,_totalLayers,_shine) {
 				thisImg.addEventListener('touchmove', function(e){
@@ -138,7 +139,6 @@ function atvImg(){
 					processExit(e,_thisImg,_layers,_totalLayers,_shine);		
 				});
 	        })(thisImg,layers,totalLayerElems,shineHTML);
-	    } else {
 	    	(function(_thisImg,_layers,_totalLayers,_shine) {
 				thisImg.addEventListener('mousemove', function(e){
 					processMovement(e,false,_thisImg,_layers,_totalLayers,_shine);		
@@ -150,7 +150,6 @@ function atvImg(){
 					processExit(e,_thisImg,_layers,_totalLayers,_shine);		
 				});
 	        })(thisImg,layers,totalLayerElems,shineHTML);
-	    }
 	}
 
 	function processMovement(e, touchEnabled, elem, layers, totalLayers, shine){
